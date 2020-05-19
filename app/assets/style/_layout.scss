@@ -73,18 +73,19 @@
 
 .hamburgerList {
     background: #fff;
-    height: 101vh;
     width: 100%;
     padding-top: 20px;
     position: absolute;
     top: 0;
-    left: -100vw;
+    left: -101vw;
     z-index: 3;
     transition: 0.3s;
 
     .listHeader {
         margin-bottom: 32px;
     }
+
+
 
     p a {
         @include smallTittle;
@@ -96,6 +97,8 @@
         margin-bottom: 0;
         padding-top: 16px;
         padding-bottom: 16px;
+
+
     }
 
     .accordion>.card {
@@ -160,6 +163,10 @@
     @include lg-width {
         display: none;
     }
+}
+
+.accordion p:last-child {
+    margin-bottom: 215px;
 }
 
 .show {
