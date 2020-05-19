@@ -1,16 +1,17 @@
-$(document).ready(() => {
+"use strict";
+
+$(document).ready(function () {
   $(".hamburgerIcon").click(function (e) {
     e.preventDefault();
     $(".hamburgerList").toggleClass("show");
   });
-
   $(".backIcon").click(function (e) {
     e.preventDefault();
     $(".hamburgerList").toggleClass("show");
   });
-
   $("#rotateBtn").click(function (e) {
     e.preventDefault();
     $("#rotate").toggleClass("rotate");
   });
 });
+//# sourceMappingURL=all.js.map
