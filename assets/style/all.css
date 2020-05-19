@@ -10916,12 +10916,11 @@ p {
 
 .hamburgerList {
   background: #fff;
-  height: 101vh;
   width: 100%;
   padding-top: 20px;
   position: absolute;
   top: 0;
-  left: -100vw;
+  left: -101vw;
   z-index: 3;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -11011,6 +11010,10 @@ p {
   .hamburgerList {
     display: none;
   }
+}
+
+.accordion p:last-child {
+  margin-bottom: 215px;
 }
 
 .show {
@@ -11186,48 +11189,68 @@ footer .copyRight {
   }
 }
 
-.banner {
+.container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
+  position: relative;
   margin-top: -65.99px;
 }
 
 @media (min-width: 992px) {
-  .banner {
-    background: url("../images/tom-crew-5HRCkrSs9Dk-unsplash-lg.jpg") no-repeat;
-    background-position: right;
-    background-size: 48.82% 100%;
+  .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
     margin-top: -77.98px;
   }
 }
 
-.bannerOpacity {
+.bannerBg {
+  background: url("../images/tom-crew-5HRCkrSs9Dk-unsplash.jpg") center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.bannerBgOpacity {
+  position: absolute;
+  width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.38);
 }
 
 @media (min-width: 992px) {
-  .bannerOpacity {
+  .bannerBgOpacity {
     background: none;
   }
 }
 
-@media (min-width: 992px) {
-  .bannerLeft {
-    width: 100%;
-  }
+.bannerText h2 {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 64px;
+  text-align: center;
+  margin-top: 188px;
+  margin-bottom: 24px;
 }
 
 @media (min-width: 992px) {
-  .bannerLeft h2 {
+  .bannerText h2 {
+    color: #121212;
+    -moz-text-align-last: left;
+         text-align-last: left;
     margin-top: 236px;
-    font-size: 48px;
-    line-height: 64px;
-    font-weight: bold;
-    margin-bottom: 24px;
   }
 }
 
+.bannerText p {
+  color: #FFFFFF99;
+  text-align: center;
+  margin-bottom: 108px;
+}
+
 @media (min-width: 992px) {
-  .bannerLeft p {
+  .bannerText p {
+    color: #121212;
+    -moz-text-align-last: left;
+         text-align-last: left;
     font-size: 24px;
     line-height: 36px;
     color: #0000009A;
@@ -11235,43 +11258,17 @@ footer .copyRight {
   }
 }
 
-@media (min-width: 992px) {
-  .bannerLeft input {
-    width: 100%;
-    padding-top: 19px;
-    padding-bottom: 18px;
-    margin-bottom: 308px;
-  }
-}
-
-.bannerRight {
+.shopBtn {
   width: 100%;
-  background: url("../images/tom-crew-5HRCkrSs9Dk-unsplash.jpg") no-repeat center;
-  background-size: cover;
-}
-
-.bannerRight h2 {
-  margin-top: 194px;
-  color: #ffffff;
-  font-size: 48px;
-  line-height: 64px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 24px;
-}
-
-.bannerRight p {
-  color: #FFFFFF99;
-  padding: 0 30px;
-  text-align: center;
-  margin-bottom: 108px;
-}
-
-.bannerRight .shopNow {
-  width: 100%;
-  padding-top: 18px;
+  padding-top: 19px;
   padding-bottom: 18px;
   margin-bottom: 24px;
+}
+
+@media (min-width: 992px) {
+  .shopBtn {
+    margin-bottom: 236px;
+  }
 }
 
 /*# sourceMappingURL=all.css.map */
