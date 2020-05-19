@@ -1,0 +1,88 @@
+.banner {
+    margin-top: -65.99px;
+
+    @include lg-width {
+        background: url("../images/tom-crew-5HRCkrSs9Dk-unsplash-lg.jpg") no-repeat; //自己裁切背景圖...
+        background-position: right;
+        background-size: 48.82% 100%;
+        margin-top: -77.98px;
+    }
+
+
+}
+
+.bannerOpacity {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.38);
+
+    @include lg-width {
+        background: none;
+    }
+}
+
+.bannerLeft {
+
+    @include lg-width {
+        width: 100%;
+
+    }
+
+    h2 {
+        @include lg-width {
+            margin-top: 236px;
+            @include bigTittle;
+            font-weight: bold;
+            margin-bottom: 24px;
+        }
+    }
+
+    p {
+        @include lg-width {
+            @include subTittle;
+            color: $subcolor;
+            margin-bottom: 48px;
+        }
+    }
+
+    input {
+
+        @include lg-width {
+            width: 100%;
+            padding-top: 19px;
+            padding-bottom: 18px;
+            margin-bottom: 308px;
+        }
+    }
+
+}
+
+.bannerRight {
+    width: 100%;
+    background: url("../images/tom-crew-5HRCkrSs9Dk-unsplash.jpg") no-repeat center;
+    background-size: cover;
+
+
+    h2 {
+        margin-top: 194px;
+        color: #ffffff;
+        @include bigTittle;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    p {
+        color: $lightercolor;
+        padding: 0 30px;
+        text-align: center;
+        margin-bottom: 108px;
+    }
+
+    .shopNow {
+        width: 100%;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        margin-bottom: 24px;
+    }
+
+}

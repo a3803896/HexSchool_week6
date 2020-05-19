@@ -1,0 +1,302 @@
+.header {
+    padding: 18px 15px;
+    position: relative;
+    z-index: 3;
+
+    @include lg-width {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .cart {
+        color: #fff;
+    }
+
+    .hamburgerIcon {
+        color: #fff;
+
+        @include lg-width {
+            display: none;
+        }
+    }
+
+    h1 {
+        font-weight: 900;
+        font-style: italic;
+
+        a {
+            color: #fff;
+        }
+
+        @include logo;
+
+
+        @include lg-width {
+
+            a {
+                color: $maincolor;
+            }
+
+        }
+    }
+
+    .headerLink {
+        @include lg-width {}
+
+        .linkInner {
+            @include lg-width {
+                color: #fff;
+            }
+
+            h3 a {
+                display: none;
+
+                @include lg-width {
+                    display: block;
+                    color: #fff;
+                    @include fontsize(16, 19);
+                    font-weight: normal;
+                    margin-bottom: 0;
+                    margin-left: 48px;
+                }
+
+            }
+
+            span {
+                @include lg-width {
+                    margin-left: 48px;
+                }
+            }
+        }
+    }
+}
+
+.hamburgerList {
+    background: #fff;
+    height: 101vh;
+    width: 100%;
+    padding-top: 20px;
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    z-index: 3;
+    transition: 0.3s;
+
+    .listHeader {
+        margin-bottom: 32px;
+    }
+
+    p a {
+        @include smallTittle;
+        color: $maincolor;
+        margin-bottom: 16px;
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid #00000062;
+        margin-bottom: 0;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .accordion>.card {
+        border: none;
+        overflow: unset;
+
+        .card-header {
+            border-bottom: 1px solid #00000062;
+            background: #ffffff;
+            padding: 0;
+
+            .btn-link {
+                padding: 0;
+                width: 100%;
+                @include smallTittle;
+                color: $maincolor;
+                margin-bottom: 16px;
+
+                &:hover {
+                    text-decoration: none;
+                }
+
+                .material-icons {
+                    transition: 0.35s;
+                }
+
+                .rotate {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        .card-body {
+            padding: 0;
+
+            ul {
+                margin-bottom: 0;
+                padding: 0;
+                list-style: none;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                border-bottom: 1px solid #00000062;
+            }
+
+            li a {
+                color: #0000009A;
+                @include fontsize(16, 19);
+                padding-top: 8px;
+                padding-bottom: 8px;
+
+            }
+
+            span {
+
+                @include fontsize(10, 14);
+            }
+        }
+
+
+    }
+
+    @include lg-width {
+        display: none;
+    }
+}
+
+.show {
+    left: 0;
+}
+
+
+.subscribeBg {
+    background: url("../images/tom-crew-uDF1mW7EUwM-unsplash.jpg") center no-repeat;
+    background-size: cover;
+
+    @include lg-width {}
+}
+
+.subscribeOpacity {
+    background: rgba(0, 0, 0, 0.38);
+
+    @include lg-width {
+        background: none;
+    }
+}
+
+.subscribe {
+    padding-top: 24px;
+
+    @include lg-width {
+        padding-top: 84px;
+        background: none;
+        opacity: 1;
+    }
+
+    h2 {
+        @include fontsize(32, 48);
+        color: #ffffff;
+        font-weight: bold;
+        margin-bottom: 24px;
+
+
+        @include lg-width {
+            @include bigTittle;
+            margin-bottom: 48px;
+        }
+    }
+
+    .subscribeForm {
+        margin-bottom: 24px;
+
+        @include lg-width {
+            margin-bottom: 84px;
+        }
+
+        &>input {
+            @include fontsize(16, 24);
+            height: 100%;
+            padding: 19px 16px 18px 16px;
+            background: transparent;
+            border: 1px solid $lightercolor;
+            color: #ffffff;
+
+            &::placeholder {
+                color: $lightercolor;
+            }
+        }
+
+        .input-group-append input {
+            @include fontsize(16, 24);
+            padding: 15px 24px;
+
+            @include lg-width {
+                padding: 16px 44px;
+            }
+        }
+    }
+}
+
+footer {
+    background: #000;
+    padding-top: 23px;
+
+    @include lg-width {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    h2 {
+        font-weight: 900;
+        font-style: italic;
+        margin-bottom: 48px;
+
+        a {
+            color: #fff;
+        }
+
+        @include logo;
+
+        @include lg-width {
+            color: $maincolor;
+            margin-bottom: 0;
+
+            a {
+                margin-right: 16px;
+            }
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 32px;
+
+        li {
+            margin-bottom: 16px;
+        }
+
+        a {
+            @include fontsize(14, 16);
+            color: $lightcolor;
+        }
+
+        @include lg-width {
+            margin-bottom: 0;
+
+            li {
+                margin-bottom: 0;
+                margin-left: 48px;
+            }
+        }
+    }
+
+    .copyRight {
+        @include fontsize(14, 16);
+        color: $lightercolor;
+        margin-bottom: 24px;
+
+        @include lg-width {
+            margin-bottom: 0;
+            line-height: 32px;
+        }
+    }
+}
