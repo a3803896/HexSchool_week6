@@ -7,6 +7,15 @@
     }
 }
 
+@media(max-width:575px) {
+    .banner .container .row .col-lg-2 {
+        padding-left: 0;
+        padding-right: 0;
+        //不確定這樣是否合適？
+    }
+}
+
+
 .bannerBg {
     background: url("../images/tom-crew-5HRCkrSs9Dk-unsplash.jpg") center;
     background-size: cover;
@@ -71,5 +80,57 @@
     @include lg-width {
         margin-bottom: 236px;
     }
+
+}
+
+.information {
+    padding-top: 48px;
+    padding-bottom: 24px;
+
+    .row:last-child img {
+        @include lg-width {
+            margin-bottom: 72px;
+        }
+    }
+
+    @include lg-width {
+        padding-bottom: 0;
+    }
+
+    img {
+        margin-bottom: 16px;
+
+        @include lg-width {
+            margin-bottom: 32px;
+        }
+    }
+
+    .infoText {
+
+        @include lg-width {
+            width: 64.8%;
+        }
+
+        h3 {
+            @include fontsize(24, 24);
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        p {
+            color: $subcolor;
+            @include fontsize(16, 24);
+            margin-bottom: 24px;
+        }
+
+        a {
+            @include fontsize(16, 19);
+            color: $highlight;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 24px;
+        }
+    }
+
 
 }
