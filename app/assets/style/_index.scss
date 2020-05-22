@@ -11,7 +11,7 @@
     .banner .container .row .col-lg-2 {
         padding-left: 0;
         padding-right: 0;
-        //不確定這樣是否合適？
+        //因為在container-fluid裡面包了container，導致元件比預設的還小，所以下段語法讓樣式正常，不確定這樣是否合適？
     }
 }
 
@@ -131,6 +131,152 @@
             margin-bottom: 24px;
         }
     }
+}
 
+.artDirectorBg {
+    background: url("../images/burningparrot-u2Xn5Bzvllw-unsplash.jpg") center;
+    background-size: cover;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    @include lg-width {
+        padding-top: 150px;
+        padding-bottom: 154px;
+    }
+
+    h2 {
+        color: #fff;
+        @include fontsize(32, 48);
+        margin-bottom: 125px;
+        font-weight: bold;
+
+        @include lg-width {
+            margin-bottom: 0;
+        }
+
+    }
+
+    .directorText {
+
+        p {
+            @include fontsize(16, 24);
+            color: $lightercolor;
+            margin-bottom: 4px;
+
+            @include lg-width {}
+
+        }
+
+        h3 {
+            color: #ffffff;
+            @include fontsize(24, 24);
+            margin-bottom: 16px;
+            font-weight: 400;
+
+
+        }
+
+        a {
+            color: $highlight;
+            @include fontsize(14, 16);
+            font-weight: bold;
+            margin-right: 24px;
+
+            @include lg-width {}
+
+        }
+    }
+}
+
+.items {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    overflow: hidden;
+
+    @include lg-width {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+
+    .card {
+        border: none;
+        position: relative;
+
+        img {
+            width: 240px;
+            height: 240px;
+            margin-bottom: 8px;
+            object-fit: cover;
+
+            @include lg-width {
+                width: 350px;
+                height: 350px;
+            }
+        }
+    }
+
+    .card-body {
+        padding: 0;
+    }
+
+    h3 {
+        font-weight: bold;
+        margin-bottom: 4px;
+        @include subTittle;
+        color: $maincolor;
+    }
+
+    p {
+        display: inline;
+        @include fontsize(16, 24);
+        margin-right: 8px;
+    }
+
+    strike {
+        @include fontsize(16, 24);
+        color: #00000062;
+    }
+
+    span {
+        @include fontsize(14, 21);
+        font-weight: bold;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        color: #ffffff;
+    }
+
+
+    //以下為swiper
+    .swiper-container {
+        overflow: unset;
+        cursor: grab;
+    }
+
+    .swiper-slide {
+        font-size: 18px;
+        background: #fff;
+        width: unset;
+        margin-right: 16px;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+
+        @include lg-width {
+            margin-right: 30px;
+        }
+
+    }
 
 }

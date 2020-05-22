@@ -40,35 +40,32 @@
         }
     }
 
-    .headerLink {
-        @include lg-width {}
+    .linkInner {
+        @include lg-width {
+            color: #fff;
+        }
 
-        .linkInner {
+        span {
             @include lg-width {
-                color: #fff;
-            }
-
-            h3 a {
-                display: none;
-
-                @include lg-width {
-                    display: block;
-                    color: #fff;
-                    @include fontsize(16, 19);
-                    font-weight: normal;
-                    margin-bottom: 0;
-                    margin-left: 48px;
-                }
-
-            }
-
-            span {
-                @include lg-width {
-                    margin-left: 48px;
-                }
+                margin-left: 48px;
             }
         }
     }
+
+    h3 a {
+        display: none;
+
+        @include lg-width {
+            display: block;
+            color: #fff;
+            @include fontsize(16, 19);
+            font-weight: normal;
+            margin-bottom: 0;
+            margin-left: 48px;
+        }
+
+    }
+
 }
 
 .hamburgerList {
@@ -85,8 +82,6 @@
         margin-bottom: 32px;
     }
 
-
-
     p a {
         @include smallTittle;
         color: $maincolor;
@@ -101,68 +96,68 @@
 
     }
 
-    .accordion>.card {
-        border: none;
-        overflow: unset;
-
-        .card-header {
-            border-bottom: 1px solid #00000062;
-            background: #ffffff;
-            padding: 0;
-
-            .btn-link {
-                padding: 0;
-                width: 100%;
-                @include smallTittle;
-                color: $maincolor;
-                margin-bottom: 16px;
-
-                &:hover {
-                    text-decoration: none;
-                }
-
-                .material-icons {
-                    transition: 0.35s;
-                }
-
-                .rotate {
-                    transform: rotate(180deg);
-                }
-            }
-        }
-
-        .card-body {
-            padding: 0;
-
-            ul {
-                margin-bottom: 0;
-                padding: 0;
-                list-style: none;
-                padding-top: 8px;
-                padding-bottom: 8px;
-                border-bottom: 1px solid #00000062;
-            }
-
-            li a {
-                color: #0000009A;
-                @include fontsize(16, 19);
-                padding-top: 8px;
-                padding-bottom: 8px;
-
-            }
-
-            span {
-
-                @include fontsize(10, 14);
-            }
-        }
-
-
-    }
-
     @include lg-width {
         display: none;
     }
+}
+
+.accordion>.card {
+    border: none;
+    overflow: unset;
+
+    .card-header {
+        border-bottom: 1px solid #00000062;
+        background: #ffffff;
+        padding: 0;
+
+        .btn-link {
+            padding: 0;
+            width: 100%;
+            @include smallTittle;
+            color: $maincolor;
+            margin-bottom: 16px;
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            .material-icons {
+                transition: 0.35s;
+            }
+
+            .rotate {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .card-body {
+        padding: 0;
+
+        ul {
+            margin-bottom: 0;
+            padding: 0;
+            list-style: none;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #00000062;
+        }
+
+        li a {
+            color: #0000009A;
+            @include fontsize(16, 19);
+            padding-top: 8px;
+            padding-bottom: 8px;
+
+        }
+
+        span {
+
+            @include fontsize(10, 14);
+        }
+    }
+
+
 }
 
 .accordion p:last-child {
@@ -210,34 +205,34 @@
             margin-bottom: 48px;
         }
     }
+}
 
-    .subscribeForm {
-        margin-bottom: 24px;
+.subscribeForm {
+    margin-bottom: 24px;
+
+    @include lg-width {
+        margin-bottom: 84px;
+    }
+
+    &>input {
+        @include fontsize(16, 24);
+        height: 100%;
+        padding: 19px 16px 18px 16px;
+        background: transparent;
+        border: 1px solid $lightercolor;
+        color: #ffffff;
+
+        &::placeholder {
+            color: $lightercolor;
+        }
+    }
+
+    .input-group-append input {
+        @include fontsize(16, 24);
+        padding: 15px 24px;
 
         @include lg-width {
-            margin-bottom: 84px;
-        }
-
-        &>input {
-            @include fontsize(16, 24);
-            height: 100%;
-            padding: 19px 16px 18px 16px;
-            background: transparent;
-            border: 1px solid $lightercolor;
-            color: #ffffff;
-
-            &::placeholder {
-                color: $lightercolor;
-            }
-        }
-
-        .input-group-append input {
-            @include fontsize(16, 24);
-            padding: 15px 24px;
-
-            @include lg-width {
-                padding: 16px 44px;
-            }
+            padding: 16px 44px;
         }
     }
 }
@@ -251,22 +246,21 @@ footer {
         padding-bottom: 32px;
     }
 
-    h2 {
+    .mainLogo {
         font-weight: 900;
         font-style: italic;
         margin-bottom: 48px;
-
-        a {
-            color: #fff;
-        }
-
         @include logo;
 
         @include lg-width {
             color: $maincolor;
             margin-bottom: 0;
+        }
 
-            a {
+        a {
+            color: #fff;
+
+            @include lg-width {
                 margin-right: 16px;
             }
         }
@@ -277,22 +271,22 @@ footer {
         padding: 0;
         margin-bottom: 32px;
 
+        @include lg-width {
+            margin-bottom: 0;
+        }
+
         li {
             margin-bottom: 16px;
+
+            @include lg-width {
+                margin-bottom: 0;
+                margin-left: 48px;
+            }
         }
 
         a {
             @include fontsize(14, 16);
             color: $lightcolor;
-        }
-
-        @include lg-width {
-            margin-bottom: 0;
-
-            li {
-                margin-bottom: 0;
-                margin-left: 48px;
-            }
         }
     }
 
