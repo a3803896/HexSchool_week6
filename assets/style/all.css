@@ -10887,29 +10887,29 @@ p {
 }
 
 @media (min-width: 992px) {
-  .header .headerLink .linkInner {
+  .header .linkInner {
     color: #fff;
   }
 }
 
-.header .headerLink .linkInner h3 a {
+@media (min-width: 992px) {
+  .header .linkInner span {
+    margin-left: 48px;
+  }
+}
+
+.header h3 a {
   display: none;
 }
 
 @media (min-width: 992px) {
-  .header .headerLink .linkInner h3 a {
+  .header h3 a {
     display: block;
     color: #fff;
     font-size: 16px;
     line-height: 19px;
     font-weight: normal;
     margin-bottom: 0;
-    margin-left: 48px;
-  }
-}
-
-@media (min-width: 992px) {
-  .header .headerLink .linkInner span {
     margin-left: 48px;
   }
 }
@@ -10944,18 +10944,24 @@ p {
   padding-bottom: 16px;
 }
 
-.hamburgerList .accordion > .card {
+@media (min-width: 992px) {
+  .hamburgerList {
+    display: none;
+  }
+}
+
+.accordion > .card {
   border: none;
   overflow: unset;
 }
 
-.hamburgerList .accordion > .card .card-header {
+.accordion > .card .card-header {
   border-bottom: 1px solid #00000062;
   background: #ffffff;
   padding: 0;
 }
 
-.hamburgerList .accordion > .card .card-header .btn-link {
+.accordion > .card .card-header .btn-link {
   padding: 0;
   width: 100%;
   font-size: 24px;
@@ -10964,27 +10970,27 @@ p {
   margin-bottom: 16px;
 }
 
-.hamburgerList .accordion > .card .card-header .btn-link:hover {
+.accordion > .card .card-header .btn-link:hover {
   text-decoration: none;
 }
 
-.hamburgerList .accordion > .card .card-header .btn-link .material-icons {
+.accordion > .card .card-header .btn-link .material-icons {
   -webkit-transition: 0.35s;
   -o-transition: 0.35s;
   transition: 0.35s;
 }
 
-.hamburgerList .accordion > .card .card-header .btn-link .rotate {
+.accordion > .card .card-header .btn-link .rotate {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-.hamburgerList .accordion > .card .card-body {
+.accordion > .card .card-body {
   padding: 0;
 }
 
-.hamburgerList .accordion > .card .card-body ul {
+.accordion > .card .card-body ul {
   margin-bottom: 0;
   padding: 0;
   list-style: none;
@@ -10993,7 +10999,7 @@ p {
   border-bottom: 1px solid #00000062;
 }
 
-.hamburgerList .accordion > .card .card-body li a {
+.accordion > .card .card-body li a {
   color: #0000009A;
   font-size: 16px;
   line-height: 19px;
@@ -11001,15 +11007,9 @@ p {
   padding-bottom: 8px;
 }
 
-.hamburgerList .accordion > .card .card-body span {
+.accordion > .card .card-body span {
   font-size: 10px;
   line-height: 14px;
-}
-
-@media (min-width: 992px) {
-  .hamburgerList {
-    display: none;
-  }
 }
 
 .accordion p:last-child {
@@ -11063,17 +11063,17 @@ p {
   }
 }
 
-.subscribe .subscribeForm {
+.subscribeForm {
   margin-bottom: 24px;
 }
 
 @media (min-width: 992px) {
-  .subscribe .subscribeForm {
+  .subscribeForm {
     margin-bottom: 84px;
   }
 }
 
-.subscribe .subscribeForm > input {
+.subscribeForm > input {
   font-size: 16px;
   line-height: 24px;
   height: 100%;
@@ -11083,34 +11083,34 @@ p {
   color: #ffffff;
 }
 
-.subscribe .subscribeForm > input::-webkit-input-placeholder {
+.subscribeForm > input::-webkit-input-placeholder {
   color: #FFFFFF99;
 }
 
-.subscribe .subscribeForm > input::-moz-placeholder {
+.subscribeForm > input::-moz-placeholder {
   color: #FFFFFF99;
 }
 
-.subscribe .subscribeForm > input:-ms-input-placeholder {
+.subscribeForm > input:-ms-input-placeholder {
   color: #FFFFFF99;
 }
 
-.subscribe .subscribeForm > input::-ms-input-placeholder {
+.subscribeForm > input::-ms-input-placeholder {
   color: #FFFFFF99;
 }
 
-.subscribe .subscribeForm > input::placeholder {
+.subscribeForm > input::placeholder {
   color: #FFFFFF99;
 }
 
-.subscribe .subscribeForm .input-group-append input {
+.subscribeForm .input-group-append input {
   font-size: 16px;
   line-height: 24px;
   padding: 15px 24px;
 }
 
 @media (min-width: 992px) {
-  .subscribe .subscribeForm .input-group-append input {
+  .subscribeForm .input-group-append input {
     padding: 16px 44px;
   }
 }
@@ -11127,7 +11127,7 @@ footer {
   }
 }
 
-footer h2 {
+footer .mainLogo {
   font-weight: 900;
   font-style: italic;
   margin-bottom: 48px;
@@ -11135,16 +11135,19 @@ footer h2 {
   line-height: 29px;
 }
 
-footer h2 a {
+@media (min-width: 992px) {
+  footer .mainLogo {
+    color: #121212;
+    margin-bottom: 0;
+  }
+}
+
+footer .mainLogo a {
   color: #fff;
 }
 
 @media (min-width: 992px) {
-  footer h2 {
-    color: #121212;
-    margin-bottom: 0;
-  }
-  footer h2 a {
+  footer .mainLogo a {
     margin-right: 16px;
   }
 }
@@ -11155,24 +11158,27 @@ footer ul {
   margin-bottom: 32px;
 }
 
+@media (min-width: 992px) {
+  footer ul {
+    margin-bottom: 0;
+  }
+}
+
 footer ul li {
   margin-bottom: 16px;
+}
+
+@media (min-width: 992px) {
+  footer ul li {
+    margin-bottom: 0;
+    margin-left: 48px;
+  }
 }
 
 footer ul a {
   font-size: 14px;
   line-height: 16px;
   color: #FFFFFFDE;
-}
-
-@media (min-width: 992px) {
-  footer ul {
-    margin-bottom: 0;
-  }
-  footer ul li {
-    margin-bottom: 0;
-    margin-left: 48px;
-  }
 }
 
 footer .copyRight {
@@ -11332,6 +11338,154 @@ footer .copyRight {
   font-weight: bold;
   display: block;
   margin-bottom: 24px;
+}
+
+.artDirectorBg {
+  background: url("../images/burningparrot-u2Xn5Bzvllw-unsplash.jpg") center;
+  background-size: cover;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+@media (min-width: 992px) {
+  .artDirectorBg {
+    padding-top: 150px;
+    padding-bottom: 154px;
+  }
+}
+
+.artDirectorBg h2 {
+  color: #fff;
+  font-size: 32px;
+  line-height: 48px;
+  margin-bottom: 125px;
+  font-weight: bold;
+}
+
+@media (min-width: 992px) {
+  .artDirectorBg h2 {
+    margin-bottom: 0;
+  }
+}
+
+.artDirectorBg .directorText p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF99;
+  margin-bottom: 4px;
+}
+
+.artDirectorBg .directorText h3 {
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+
+.artDirectorBg .directorText a {
+  color: #0E8A00;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  margin-right: 24px;
+}
+
+.items {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .items {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+}
+
+.items .card {
+  border: none;
+  position: relative;
+}
+
+.items .card img {
+  width: 240px;
+  height: 240px;
+  margin-bottom: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (min-width: 992px) {
+  .items .card img {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+.items .card-body {
+  padding: 0;
+}
+
+.items h3 {
+  font-weight: bold;
+  margin-bottom: 4px;
+  font-size: 24px;
+  line-height: 36px;
+  color: #121212;
+}
+
+.items p {
+  display: inline;
+  font-size: 16px;
+  line-height: 24px;
+  margin-right: 8px;
+}
+
+.items strike {
+  font-size: 16px;
+  line-height: 24px;
+  color: #00000062;
+}
+
+.items span {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: bold;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #ffffff;
+}
+
+.items .swiper-container {
+  overflow: unset;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.items .swiper-slide {
+  font-size: 18px;
+  background: #fff;
+  width: unset;
+  margin-right: 16px;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .items .swiper-slide {
+    margin-right: 30px;
+  }
 }
 
 /*# sourceMappingURL=all.css.map */
