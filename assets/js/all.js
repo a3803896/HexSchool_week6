@@ -36,6 +36,21 @@ $(document).ready(function () {
     if (window.location.href === "https://a3803896.github.io/HexSchool_week6/shop.html") {
       $(this).addClass('nowPage');
     }
+  }); // 自製按鈕
+
+  var num = Number(document.querySelector("#numberArr").textContent);
+  $("#plus").click(function (e) {
+    e.preventDefault();
+    num += 1;
+    document.querySelector("#numberArr").textContent = num;
+  });
+  $("#minus").click(function (e) {
+    e.preventDefault();
+
+    if (num > 1) {
+      num -= 1;
+      document.querySelector("#numberArr").textContent = num;
+    }
   });
 });
 //# sourceMappingURL=all.js.map
