@@ -40,4 +40,20 @@ $(document).ready(() => {
     }
   });
 
+  // 自製按鈕
+  let num = Number(document.querySelector("#numberArr").textContent);
+  $("#plus").click(function (e) {
+    e.preventDefault();
+    num += 1;
+    document.querySelector("#numberArr").textContent = num;
+  });
+  $("#minus").click(function (e) {
+    e.preventDefault();
+    if (num > 1) {
+      num -= 1;
+      document.querySelector("#numberArr").textContent = num;
+    }
+  });
+
+
 });
