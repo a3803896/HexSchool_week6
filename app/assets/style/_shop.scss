@@ -1,0 +1,170 @@
+.header {}
+
+.maincolor {
+    color: $maincolor !important;
+}
+
+.nowPage {
+    font-weight: bold !important;
+    color: $highlight !important;
+}
+
+.shopNav {
+    background: #F2F2F2;
+
+    ul {
+        margin-bottom: 0;
+        padding: 16px 0;
+        list-style: none;
+
+        @include lg-width {
+            padding: 24px 0;
+        }
+    }
+
+    li a {
+        color: #0000009A;
+        @include fontsize(16, 19);
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin-right: 24px;
+
+        @include lg-width {
+            @include fontsize(24, 28);
+            margin-right: 40px;
+        }
+    }
+
+    span {
+        vertical-align: super;
+        @include fontsize(10, 14);
+    }
+}
+
+.productList {
+    padding-top: 32px;
+
+    @include lg-width {
+        padding-top: 48px;
+    }
+}
+
+.card-columns {
+    column-count: 2;
+    column-gap: 8px;
+
+
+    @include lg-width {
+        column-count: 3;
+        column-gap: 30px;
+    }
+}
+
+.productList .card {
+    border: none;
+    margin-bottom: 24px !important;
+    width: 100%;
+    display: inline-block;
+
+    @include lg-width {
+        &:nth-child(4n-3) img {
+            height: 350px;
+        }
+
+        &:nth-child(2) img,
+        &:nth-child(6) img,
+        &:nth-child(7) img {
+            height: 240px;
+        }
+
+        &:nth-child(3) img,
+        &:nth-child(4) img,
+        &:nth-child(8) img {
+            height: 480px;
+        }
+    }
+
+    img {
+        margin-bottom: 8px;
+        width: 100%;
+        height: 161px;
+        object-fit: cover;
+
+        @include sm-width {
+            height: 250px;
+        }
+
+        @include lg-width {}
+    }
+
+    h3 {
+        font-weight: bold;
+        margin-bottom: 4px;
+        @include fontsize(20, 30);
+        color: $maincolor;
+
+        @include lg-width {
+            @include subTittle;
+        }
+    }
+
+    p {
+        display: inline;
+        @include fontsize(14, 21);
+        margin-right: 8px;
+
+        @include lg-width {
+            @include fontsize(16, 24);
+        }
+    }
+
+    strike {
+        @include fontsize(14, 21);
+        color: #00000062;
+
+        @include lg-width {
+            @include fontsize(16, 24);
+        }
+
+    }
+
+    .onsale {
+        @include fontsize(14, 21);
+        font-weight: bold;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        color: #ffffff;
+
+        @include lg-width {
+            top: 16px;
+            right: 16px;
+        }
+    }
+}
+
+.card-body {
+    padding: 0;
+
+}
+
+.pagination {
+    margin-top: 24px;
+    margin-bottom: 48px;
+
+    @include lg-width {
+        margin-top: 48px;
+        margin-bottom: 72px;
+    }
+
+    .page-link {
+        color: $maincolor;
+        padding: 0 16px;
+        border: none;
+        @include fontsize(24, 36);
+    }
+
+    .underLine {
+        text-decoration: underline;
+    }
+}
