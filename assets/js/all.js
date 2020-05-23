@@ -13,6 +13,10 @@ $(document).ready(function () {
     e.preventDefault();
     $("#rotate").toggleClass("rotate");
   });
+  $("#button-addon2").click(function (e) {
+    e.preventDefault();
+    alert("Successfully subscribed");
+  });
   var swiper = new Swiper('.swiper-container', {
     slidesPerView: 'auto',
     centeredSlides: false,
@@ -20,6 +24,17 @@ $(document).ready(function () {
     pagination: {
       el: '.swiper-pagination',
       clickable: true
+    }
+  }); // 換頁時切換layout的css樣式
+
+  $('.hamburgerIcon,.cart,.header h1 a,.header h3 a').each(function () {
+    if (window.location.href === "http://localhost:8080/shop.html") {
+      $(this).addClass('maincolor');
+    }
+  });
+  $('.linkInner>h3:first-child>a').each(function () {
+    if (window.location.href === "http://localhost:8080/shop.html") {
+      $(this).addClass('nowPage');
     }
   });
 });
