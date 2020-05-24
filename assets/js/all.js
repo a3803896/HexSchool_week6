@@ -28,12 +28,12 @@ $(document).ready(function () {
   }); // 換頁時切換layout的css樣式
 
   $('.hamburgerIcon,.cart,.header h1 a,.header h3 a').each(function () {
-    if (window.location.href === "https://a3803896.github.io/HexSchool_week6/shop.html") {
+    if (window.location.href.includes('shop.html')) {
       $(this).addClass('maincolor');
     }
   });
   $('.linkInner>h3:first-child>a').each(function () {
-    if (window.location.href === "https://a3803896.github.io/HexSchool_week6/shop.html") {
+    if (window.location.href.includes('shop.html')) {
       $(this).addClass('nowPage');
     }
   }); // 自製按鈕
