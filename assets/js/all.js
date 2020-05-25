@@ -57,6 +57,34 @@ $(document).ready(function () {
       document.querySelector("#numberArr").textContent = num;
     }
   });
+  var num2 = Number(document.querySelector("#numberArr2").textContent);
+  $("#plus2").click(function (e) {
+    e.preventDefault();
+    num2 += 1;
+    document.querySelector("#numberArr2").textContent = num2;
+  });
+  $("#minus2").click(function (e) {
+    e.preventDefault();
+
+    if (num2 > 1) {
+      num2 -= 1;
+      document.querySelector("#numberArr2").textContent = num2;
+    }
+  });
+  var num3 = Number(document.querySelector("#numberArr3").textContent);
+  $("#plus3").click(function (e) {
+    e.preventDefault();
+    num3 += 1;
+    document.querySelector("#numberArr3").textContent = num3;
+  });
+  $("#minus3").click(function (e) {
+    e.preventDefault();
+
+    if (num3 > 1) {
+      num3 -= 1;
+      document.querySelector("#numberArr3").textContent = num3;
+    }
+  });
   $('.toast').toast('show');
 });
 //# sourceMappingURL=all.js.map

@@ -11197,28 +11197,75 @@ footer .copyRight {
 
 .modal-dialog {
   margin: 0;
+  width: 100vw;
 }
 
 @media (min-width: 992px) {
   .modal-dialog {
     position: absolute;
     right: 0;
+    max-width: unset;
+    width: 42.1%;
   }
 }
 
 .modal-content {
   border: none;
   border-radius: 0;
-  height: 100vh;
+}
+
+@media (min-width: 992px) {
+  .modal-content {
+    height: 100vh;
+  }
 }
 
 .modal-header {
   padding: 15px;
+  padding-bottom: 0;
   border-bottom: none;
+}
+
+@media (min-width: 992px) {
+  .modal-header {
+    padding: 54px 48px 0 48px;
+    margin-bottom: 28px;
+  }
+}
+
+.modal-header h5 {
+  font-size: 24px;
+  line-height: 64px;
+  font-weight: bold;
+}
+
+@media (min-width: 992px) {
+  .modal-header h5 {
+    font-size: 48px;
+    line-height: 64px;
+  }
+}
+
+.modal-header sup {
+  color: #0E8A00;
+}
+
+@media (min-width: 992px) {
+  .modal-header .material-icons {
+    font-size: 48px;
+    line-height: 64px;
+  }
 }
 
 .modal-body {
   padding: 15px;
+  padding-top: 0;
+}
+
+@media (min-width: 992px) {
+  .modal-body {
+    padding: 0 48px 48px 48px;
+  }
 }
 
 .modal-footer {
@@ -11232,6 +11279,26 @@ footer .copyRight {
   padding-bottom: 18px;
 }
 
+.toastArea .toast {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+@media (min-width: 992px) {
+  .toastArea .toast {
+    max-width: unset;
+    width: 100%;
+  }
+}
+
+.toastArea .toast:first-child {
+  margin-bottom: 16px;
+}
+
+.toastArea .toast:last-child {
+  margin-bottom: 24px;
+}
+
 .toast-header {
   padding: 0;
 }
@@ -11243,19 +11310,38 @@ footer .copyRight {
      object-fit: cover;
 }
 
+@media (min-width: 992px) {
+  .toast-header img {
+    width: 112px;
+    height: 113px;
+  }
+}
+
 .toast-body {
   background: #F2F2F2;
   padding: 8px;
   width: 71%;
 }
 
+@media (min-width: 992px) {
+  .toast-body {
+    width: 82.2%;
+    padding: 16px;
+  }
+}
+
 .toast-body h4 {
   margin-bottom: 0;
   font-size: 16px;
+  font-weight: bold;
 }
 
 .toast-body .material-icons {
   font-size: 19px;
+}
+
+.toast-body .cartListPrice {
+  margin-bottom: 12px;
 }
 
 .toast-body .cartListPrice span {
@@ -11267,16 +11353,63 @@ footer .copyRight {
   color: #00000062;
 }
 
-.toast-body .numberBtn {
-  width: 33%;
+@media (min-width: 992px) {
+  .toast-body .numberBtn {
+    width: 21%;
+  }
 }
 
 .toast-body .numberBtn .numberArr {
-  margin: 0;
+  margin: 0 12px;
 }
 
 .toast-body .numberBtn .material-icons {
-  padding: 0;
+  padding: 0 12px;
+}
+
+.toast-body .listItemCounter p {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+@media (min-width: 992px) {
+  .totalInner {
+    width: 81%;
+  }
+}
+
+@media (min-width: 992px) {
+  .totalInner a {
+    padding-top: 19px;
+    padding-bottom: 18px;
+  }
+}
+
+.subtotal p,
+.shipping p {
+  font-size: 16px;
+  line-height: 36px;
+  color: #0000009A;
+}
+
+.shipping {
+  margin-bottom: 24px;
+}
+
+.mainTotal {
+  margin-bottom: 178px;
+}
+
+@media (min-width: 992px) {
+  .mainTotal {
+    margin-bottom: 24px;
+  }
+}
+
+.mainTotal h4 {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: bold;
 }
 
 .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
