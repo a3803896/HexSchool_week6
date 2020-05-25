@@ -311,7 +311,7 @@ footer {
         position: absolute;
         right: 0;
         max-width: unset;
-        width: 42.1%;
+        width: 540px;
     }
 }
 
@@ -319,9 +319,7 @@ footer {
     border: none;
     border-radius: 0;
 
-    @include lg-width {
-        height: 100vh;
-    }
+    @include lg-width {}
 
 }
 
@@ -449,7 +447,7 @@ footer {
 
     .numberBtn {
         @include lg-width {
-            width: 21%;
+            width: 33%;
         }
 
         .numberArr {
