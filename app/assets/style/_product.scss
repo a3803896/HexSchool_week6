@@ -1,29 +1,104 @@
+.no-lg-gutters {
+    @include lg-width {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+.addCart {
+    padding-bottom: 48px;
+    overflow: hidden;
+    position: relative;
+
+
+}
+
 .addCartBg {
     background: url("../images/tom-crew-XtyxEBiA8D8-unsplash.jpg") center;
     background-size: cover;
     height: 360px;
+
+    &>p {
+        color: #ffffff;
+        @include fontsize(14, 21);
+        font-weight: bold;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+
+        @include lg-width {
+            top: 24px;
+            left: 24px;
+        }
+    }
+
+    @include lg-width {
+        height: 442px;
+    }
 }
 
-.confirmBlock {}
+.confirmBlock {
+    margin-bottom: 48px;
+
+    @include lg-width {
+        margin-bottom: 0;
+    }
+}
 
 .confirmInner {
     padding: 16px;
     margin-top: -35px;
     background: #fff;
     border-radius: 2px;
+    margin-bottom: 24px;
+
+    @include lg-width {
+        width: 106.6%;
+        margin-top: 0;
+        margin-left: -91px;
+        margin-bottom: 0;
+        padding: 32px 16px 32px 32px;
+    }
+
+    p {
+        @include fontsize(16, 24);
+        color: #0000009A;
+        margin-bottom: 8px;
+
+        @include lg-width {
+            margin-bottom: 16px;
+        }
+    }
+
+    h2 {
+        @include fontsize(32, 38);
+        color: $maincolor;
+        margin-bottom: 16px;
+        font-weight: bold;
+
+        @include lg-width {
+            @include fontsize(48, 57);
+            margin-bottom: 15px;
+        }
+    }
 }
 
 .numberBtn {
     background: #F2F2F2;
     border-radius: 4px;
-    width: 48%;
+    width: 50.3%;
     @include fontsize(15, 23);
 
+    @include lg-width {
+        width: 33.9%;
+    }
+
     .numberArr {
-        margin: 0 31px;
+        margin: 0 20px;
     }
 
     .material-icons {
+        padding: 11px;
         font-size: 26px;
         font-weight: bold;
     }
@@ -31,10 +106,156 @@
 
 .price {
     text-align: right;
-    width: 48%;
+    width: 49.67%;
+
+    @include lg-width {
+        order: -1;
+        width: 100%;
+    }
+
+    strike {
+        @include fontsize(16, 24);
+        color: #00000062;
+        margin-bottom: 4px;
+        margin-top: 6px;
+    }
+
+    h2 {
+        @include fontsize(24, 28);
+        font-weight: bold;
+        margin-bottom: 0;
+
+        @include lg-width {
+            margin-bottom: 24px;
+        }
+    }
 }
 
 .addCartBtn {
+    color: #ffffff;
     margin-top: 16px;
     width: 100%;
+    padding-top: 19px;
+    padding-bottom: 18px;
+
+    @include lg-width {
+        width: 64.1%;
+        margin-top: 0;
+        margin-left: 8px;
+    }
+}
+
+.productIntro {
+    color: $maincolor;
+    @include fontsize(16, 24);
+    margin-bottom: 16px;
+
+    @include lg-width {
+        @include fontsize(20, 30);
+    }
+}
+
+.productDetail {
+    color: #0000009A;
+    @include fontsize(14, 21);
+
+    @include lg-width {
+        @include fontsize(16, 24);
+    }
+}
+
+.productText {
+    @include lg-width {
+        margin-bottom: 72px;
+    }
+}
+
+.swiper-container {
+    overflow: unset;
+    cursor: grab;
+
+    h2 {
+        @include fontsize(32, 38);
+        color: #121212;
+        font-weight: bold;
+        margin-bottom: 16px;
+    }
+
+    .card {
+        border: none;
+        position: relative;
+    }
+
+    img {
+        width: 240px;
+        height: 240px;
+        margin-bottom: 8px;
+        object-fit: cover;
+
+        @include lg-width {
+            width: 350px;
+            height: 350px;
+        }
+    }
+
+    .card-body {
+        padding: 0;
+    }
+
+    h3 {
+        font-weight: bold;
+        margin-bottom: 4px;
+        @include subTittle;
+        color: $maincolor;
+    }
+
+    p {
+        display: inline;
+        @include fontsize(16, 24);
+        margin-right: 8px;
+    }
+
+    strike {
+        @include fontsize(16, 24);
+        color: #00000062;
+    }
+
+    .onsale {
+        @include fontsize(14, 21);
+        font-weight: bold;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        color: #ffffff;
+
+        @include lg-width {
+            top: 16px;
+            right: 16px;
+        }
+    }
+
+    .swiper-slide {
+        font-size: 18px;
+        background: #fff;
+        width: unset;
+        margin-right: 16px;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        // -webkit-align-items: center;
+        // align-items: center;
+
+        @include lg-width {
+            margin-right: 30px;
+        }
+    }
 }

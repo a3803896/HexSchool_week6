@@ -198,20 +198,26 @@
         padding-bottom: 72px;
     }
 
+    //以下為swiper
+    .swiper-container {
+        overflow: unset;
+        cursor: grab;
+    }
+
     .card {
         border: none;
         position: relative;
+    }
 
-        img {
-            width: 240px;
-            height: 240px;
-            margin-bottom: 8px;
-            object-fit: cover;
+    img {
+        width: 240px;
+        height: 240px;
+        margin-bottom: 8px;
+        object-fit: cover;
 
-            @include lg-width {
-                width: 350px;
-                height: 350px;
-            }
+        @include lg-width {
+            width: 350px;
+            height: 350px;
         }
     }
 
@@ -246,13 +252,6 @@
         color: #ffffff;
     }
 
-
-    //以下為swiper
-    .swiper-container {
-        overflow: unset;
-        cursor: grab;
-    }
-
     .swiper-slide {
         font-size: 18px;
         background: #fff;
@@ -276,7 +275,5 @@
         @include lg-width {
             margin-right: 30px;
         }
-
     }
-
 }

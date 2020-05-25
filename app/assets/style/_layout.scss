@@ -301,3 +301,93 @@ footer {
         }
     }
 }
+
+//modal
+.modal-dialog {
+    margin: 0;
+
+
+    @include lg-width {
+        position: absolute;
+        right: 0;
+    }
+
+}
+
+.modal-content {
+    border: none;
+    border-radius: 0;
+    height: 100vh;
+
+    @include lg-width {}
+}
+
+.modal-header {
+    padding: 15px;
+    border-bottom: none;
+}
+
+.modal-body {
+    padding: 15px;
+
+}
+
+.modal-footer {
+    padding: 15px;
+    border-top: none;
+
+    .btn-success {
+        width: 100%;
+        padding-top: 19px;
+        padding-bottom: 18px;
+    }
+}
+
+.toast-header {
+    padding: 0;
+
+    img {
+        width: 96px;
+        height: 96px;
+        object-fit: cover;
+    }
+}
+
+.toast-body {
+    background: #F2F2F2;
+    padding: 8px;
+    width: 71%;
+
+    h4 {
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+
+    .material-icons {
+        font-size: 19px;
+    }
+
+    .cartListPrice {
+        span {
+            font-size: 14px;
+        }
+
+        strike {
+            font-size: 12px;
+            color: #00000062;
+        }
+    }
+
+    .numberBtn {
+        width: 33%;
+
+        .numberArr {
+            margin: 0;
+        }
+
+        .material-icons {
+            padding: 0;
+        }
+    }
+
+}
