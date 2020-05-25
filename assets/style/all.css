@@ -11205,19 +11205,13 @@ footer .copyRight {
     position: absolute;
     right: 0;
     max-width: unset;
-    width: 42.1%;
+    width: 540px;
   }
 }
 
 .modal-content {
   border: none;
   border-radius: 0;
-}
-
-@media (min-width: 992px) {
-  .modal-content {
-    height: 100vh;
-  }
 }
 
 .modal-header {
@@ -11355,7 +11349,7 @@ footer .copyRight {
 
 @media (min-width: 992px) {
   .toast-body .numberBtn {
-    width: 21%;
+    width: 33%;
   }
 }
 
