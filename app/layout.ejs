@@ -42,47 +42,91 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Cart List<sup>3</sup></h5>
+          <h5 class="modal-title" id="exampleModalLabel">Cart List <sup>3</sup></h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span class="material-icons">clear</span>
           </button>
         </div>
         <div class="modal-body">
 
-
-          <div role="alert" aria-live="assertive" aria-atomic="true" class="toast d-flex" data-autohide="false">
-            <div class="toast-header">
-              <img src="./assets/images/tom-crew-bgIO-u4GEfI-unsplash.jpg" alt="...">
-            </div>
-            <div class="toast-body">
-              <div class="toastBodyTittle d-flex justify-content-between">
-                <h4>
-                  Tatami Cup
-                </h4>
-                <button type="button" class="close" data-dismiss="toast" aria-label="Close">
-                  <span class="material-icons">clear</span>
-                </button>
+          <div class="toastArea">
+            <div role="alert" aria-live="assertive" aria-atomic="true" class="toast d-flex" data-autohide="false">
+              <div class="toast-header">
+                <img src="./assets/images/tom-crew-XtyxEBiA8D8-unsplash.jpg" alt="...">
               </div>
-              <div class="cartListPrice">
-                <span>NT$1,080</span>
-                <strike>NT$1,200</strike>
-              </div>
-
-              <div class="listItemCounter d-flex">
-                <div class="numberBtn d-flex justify-content-center align-items-center ">
-                  <span class="material-icons" id="minus">remove</span>
-                  <span class="numberArr" id="numberArr">1</span>
-                  <span class="material-icons" id="plus">add</span>
+              <div class="toast-body">
+                <div class="toastBodyTittle d-flex justify-content-between">
+                  <h4>
+                    Tatami Cup
+                  </h4>
+                  <button type="button" class="close" data-dismiss="toast" aria-label="Close">
+                    <span class="material-icons">clear</span>
+                  </button>
                 </div>
-                <p>NT$1,080</p>
+                <div class="cartListPrice">
+                  <span>NT$1,080</span>
+                  <strike>NT$1,200</strike>
+                </div>
+                <div class="listItemCounter d-flex justify-content-between">
+                  <div class="numberBtn d-flex justify-content-center align-items-center ">
+                    <span class="material-icons" id="minus2">remove</span>
+                    <span class="numberArr" id="numberArr2">1</span>
+                    <span class="material-icons" id="plus2">add</span>
+                  </div>
+                  <p>NT$1,080</p>
+                </div>
+              </div>
+            </div>
+
+            <div role="alert" aria-live="assertive" aria-atomic="true" class="toast d-flex" data-autohide="false">
+              <div class="toast-header">
+                <img src="./assets/images/tom-crew-bgIO-u4GEfI-unsplash.jpg" alt="...">
+              </div>
+              <div class="toast-body">
+                <div class="toastBodyTittle d-flex justify-content-between">
+                  <h4>
+                    Baifan Bowl
+                  </h4>
+                  <button type="button" class="close" data-dismiss="toast" aria-label="Close">
+                    <span class="material-icons">clear</span>
+                  </button>
+                </div>
+                <div class="cartListPrice">
+                  <span>NT$1,800</span>
+                </div>
+                <div class="listItemCounter d-flex justify-content-between">
+                  <div class="numberBtn d-flex justify-content-center align-items-center ">
+                    <span class="material-icons" id="minus3">remove</span>
+                    <span class="numberArr" id="numberArr3">1</span>
+                    <span class="material-icons" id="plus3">add</span>
+                  </div>
+                  <p>NT$1,080</p>
+                </div>
               </div>
             </div>
           </div>
 
+          <div class="totalArea d-lg-flex justify-content-lg-end">
+            <div class="totalInner">
+              <div class="subtotal d-flex justify-content-between">
+                <p>Subtotal</p>
+                <p>NT$4,680</p>
+              </div>
+              <div class="shipping d-flex justify-content-between">
+                <p>Shipping</p>
+                <p>NT$80</p>
+              </div>
+              <div class="mainTotal d-flex justify-content-between">
+                <h4>Total</h4>
+                <h4>NT$4,760</h4>
+              </div>
+              <a href="" class="btn btn-success d-none d-lg-block">Checkout</a>
+            </div>
+          </div>
 
         </div>
         <div class="modal-footer">
-          <a href="" class="btn btn-success">Checkout</a>
+          <a href="" class="btn btn-success d-lg-none">Checkout</a>
         </div>
       </div>
     </div>

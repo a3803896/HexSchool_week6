@@ -305,30 +305,63 @@ footer {
 //modal
 .modal-dialog {
     margin: 0;
-
+    width: 100vw;
 
     @include lg-width {
         position: absolute;
         right: 0;
+        max-width: unset;
+        width: 42.1%;
     }
-
 }
 
 .modal-content {
     border: none;
     border-radius: 0;
-    height: 100vh;
 
-    @include lg-width {}
+    @include lg-width {
+        height: 100vh;
+    }
+
 }
 
 .modal-header {
     padding: 15px;
+    padding-bottom: 0;
     border-bottom: none;
+
+    @include lg-width {
+        padding: 54px 48px 0 48px;
+        margin-bottom: 28px;
+    }
+
+    h5 {
+        @include fontsize(24, 64);
+        font-weight: bold;
+
+        @include lg-width {
+            @include fontsize(48, 64);
+        }
+    }
+
+    sup {
+        color: $highlight;
+    }
+
+    .material-icons {
+        @include lg-width {
+            @include fontsize(48, 64);
+        }
+    }
 }
 
 .modal-body {
     padding: 15px;
+    padding-top: 0;
+
+    @include lg-width {
+        padding: 0 48px 48px 48px;
+    }
 
 }
 
@@ -343,6 +376,27 @@ footer {
     }
 }
 
+.toastArea {
+    @include lg-width {}
+
+    .toast {
+        box-shadow: none;
+
+        @include lg-width {
+            max-width: unset;
+            width: 100%;
+        }
+    }
+
+    .toast:first-child {
+        margin-bottom: 16px;
+    }
+
+    .toast:last-child {
+        margin-bottom: 24px;
+    }
+}
+
 .toast-header {
     padding: 0;
 
@@ -350,7 +404,14 @@ footer {
         width: 96px;
         height: 96px;
         object-fit: cover;
+
+        @include lg-width {
+            width: 112px;
+            height: 113px;
+        }
     }
+
+
 }
 
 .toast-body {
@@ -358,9 +419,15 @@ footer {
     padding: 8px;
     width: 71%;
 
+    @include lg-width {
+        width: 82.2%;
+        padding: 16px;
+    }
+
     h4 {
         margin-bottom: 0;
         font-size: 16px;
+        font-weight: bold;
     }
 
     .material-icons {
@@ -368,6 +435,8 @@ footer {
     }
 
     .cartListPrice {
+        margin-bottom: 12px;
+
         span {
             font-size: 14px;
         }
@@ -379,15 +448,58 @@ footer {
     }
 
     .numberBtn {
-        width: 33%;
+        @include lg-width {
+            width: 21%;
+        }
 
         .numberArr {
-            margin: 0;
+            margin: 0 12px;
         }
 
         .material-icons {
-            padding: 0;
+            padding: 0 12px;
         }
     }
 
+    .listItemCounter p {
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+}
+
+.totalInner {
+    @include lg-width {
+        width: 81%;
+    }
+
+    a {
+        @include lg-width {
+            padding-top: 19px;
+            padding-bottom: 18px;
+        }
+    }
+}
+
+.subtotal p,
+.shipping p {
+    @include fontsize(16, 36);
+    color: #0000009A;
+}
+
+.shipping {
+    margin-bottom: 24px;
+}
+
+.mainTotal {
+    margin-bottom: 178px;
+
+    @include lg-width {
+        margin-bottom: 24px;
+    }
+
+    h4 {
+        @include fontsize(24, 36);
+        font-weight: bold;
+    }
 }
