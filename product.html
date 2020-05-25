@@ -29,12 +29,65 @@
             <h3><a href="shop.html">Product</a></h3>
             <h3><a href="#">Blog</a></h3>
             <h3><a href="#">Contact</a></h3>
-            <a href="#" class="cart"><span class="material-icons">shopping_cart</span></a>
+            <a href="#" class="cart"><span class="material-icons" data-toggle="modal"
+                data-target="#exampleModal">shopping_cart</span></a>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cart List<sup>3</sup></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span class="material-icons">clear</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+
+          <div role="alert" aria-live="assertive" aria-atomic="true" class="toast d-flex" data-autohide="false">
+            <div class="toast-header">
+              <img src="./assets/images/tom-crew-bgIO-u4GEfI-unsplash.jpg" alt="...">
+            </div>
+            <div class="toast-body">
+              <div class="toastBodyTittle d-flex justify-content-between">
+                <h4>
+                  Tatami Cup
+                </h4>
+                <button type="button" class="close" data-dismiss="toast" aria-label="Close">
+                  <span class="material-icons">clear</span>
+                </button>
+              </div>
+              <div class="cartListPrice">
+                <span>NT$1,080</span>
+                <strike>NT$1,200</strike>
+              </div>
+
+              <div class="listItemCounter d-flex">
+                <div class="numberBtn d-flex justify-content-center align-items-center ">
+                  <span class="material-icons" id="minus">remove</span>
+                  <span class="numberArr" id="numberArr">1</span>
+                  <span class="material-icons" id="plus">add</span>
+                </div>
+                <p>NT$1,080</p>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="modal-footer">
+          <a href="" class="btn btn-success">Checkout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
 
   <!-- 手機版才會顯示的選單 -->
   <div class="hamburgerList roboto">
@@ -73,20 +126,20 @@
   </div>
 
   
-<div class="addCart">
+<div class="addCart roboto">
     <div class="container">
-        <div class="row">
+        <div class="row d-lg-flex flex-lg-nowrap no-lg-gutters mb-5">
             <!-- 背景圖 -->
-            <div class="col-12 addCartBg">
-
+            <div class="col-12 col-lg-8 addCartBg">
+                <p>On Sale</p>
             </div>
             <!-- 方塊 -->
-            <div class="col-12 confirmBlock">
+            <div class="col-12 col-lg-5 confirmBlock d-lg-flex align-items-lg-center">
                 <div class="confirmInner">
                     <p>Home / Product / Cup</p>
                     <h2>Tatami Cup</h2>
-                    <div class="inputBlock d-flex justify-content-end flex-wrap">
-                        <div class="numberBtn d-flex justify-content-center align-items-center">
+                    <div class="inputBlock d-flex justify-content-between flex-wrap justify-content-lg-end">
+                        <div class="numberBtn d-flex justify-content-center align-items-center ">
                             <span class="material-icons" id="minus">remove</span>
                             <span class="numberArr" id="numberArr">1</span>
                             <span class="material-icons" id="plus">add</span>
@@ -95,56 +148,74 @@
                             <strike>NT$1,200</strike>
                             <h2>NT$1,080</h2>
                         </div>
-                        <button class="btn btn-success addCartBtn">Add to cart</button>
+                        <button class="btn btn-success addCartBtn" data-toggle="modal" data-target="#exampleModal">Add
+                            to cart</button>
                     </div>
                 </div>
-                <p class="mb-3">This beautiful light grey cup comes from Taiwan. Add some minimalist scenes to your
+                <p class="productIntro d-lg-none">This beautiful light grey cup comes from Taiwan. Add some minimalist
+                    scenes to
+                    your
                     lifetime and use
                     this cup for tea, coffee, dessert, or to place small items as a dish tray.</p>
-                <p>Made in Taiwan<br> 8 x 8 x 6 cm<br> Dishwasher and Microwave-safe</p>
+                <p class="productDetail d-lg-none">Made in Taiwan<br> 8 x 8 x 6 cm<br> Dishwasher and Microwave-safe</p>
             </div>
-
-
-
-            <div class="swiper-container container">
-                <h2>You might also like…</h2>
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <img src="./assets/images/tom-crew-XtyxEBiA8D8-unsplash.jpg" class="" alt="...">
-                            <div class="card-body">
-                                <h3>Tatami Cup</h3>
-                                <p>NT$1,080</p>
-                                <strike>NT$1,200</strike>
-                                <span class="onsale">On Sale</span>
+        </div>
+        <div class="row d-none d-lg-block d-lg-flex productText">
+            <div class="col-lg-5">
+                <p class="productIntro">This beautiful light grey cup comes from Taiwan. Add some minimalist
+                    scenes to
+                    your
+                    lifetime and use
+                    this cup for tea, coffee, dessert, or to place small items as a dish tray.</p>
+            </div>
+            <div class="col-lg-3">
+                <p class="productDetail">Made in Taiwan<br> 8 x 8 x 6 cm<br> Dishwasher and Microwave-safe</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="swiper-container">
+                    <h2>You might also like…</h2>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="./assets/images/tom-crew-bgIO-u4GEfI-unsplash.jpg" class="" alt="...">
+                                <div class="card-body">
+                                    <h3>Baifan Bowl</h3>
+                                    <p>NT$1,800</p>
+                                    <span class="onsale">On Sale</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <img src="./assets/images/tom-crew-7HuTGlUfQSo-unsplash.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h3>Couple Collection</h3>
-                                <p>NT$2,800</p>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="./assets/images/tom-crew-vu0lyZYeseY-unsplash.jpg" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body">
+                                    <h3>Kabi Mug</h3>
+                                    <p>NT$980</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <img src="./assets/images/tom-crew-8_ldgq801cE-unsplash.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h3>Brotherhood Vase</h3>
-                                <p>NT$4,800</p>
-                            </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="./assets/images/tom-crew-oiZAQvxTcYQ-unsplash.jpg" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body">
+                                    <h3>Limdae Cup</h3>
+                                    <p>NT$2,400</p>
+                                </div>
 
+                            </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <img src="./assets/images/tom-crew-bgIO-u4GEfI-unsplash.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h3>Baifan Bowl</h3>
-                                <p>NT$1,800</p>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="./assets/images/tom-crew-YA2E3d7a9Wo-unsplash.jpg" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body">
+                                    <h3>Shiro Plate</h3>
+                                    <p>NT$1,200</p>
+                                </div>
                             </div>
                         </div>
                     </div>

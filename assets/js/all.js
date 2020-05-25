@@ -32,6 +32,11 @@ $(document).ready(function () {
       $(this).addClass('maincolor');
     }
   });
+  $('.hamburgerIcon,.cart,.header h1 a,.header h3 a').each(function () {
+    if (window.location.href.includes('product.html')) {
+      $(this).addClass('maincolor');
+    }
+  });
   $('.linkInner>h3:first-child>a').each(function () {
     if (window.location.href.includes('shop.html')) {
       $(this).addClass('nowPage');
@@ -52,5 +57,6 @@ $(document).ready(function () {
       document.querySelector("#numberArr").textContent = num;
     }
   });
+  $('.toast').toast('show');
 });
 //# sourceMappingURL=all.js.map
