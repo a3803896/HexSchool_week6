@@ -11016,7 +11016,7 @@ p {
   margin-bottom: 215px;
 }
 
-.show {
+.showUp {
   left: 0;
 }
 
@@ -11198,12 +11198,12 @@ footer .copyRight {
 .modal-dialog {
   margin: 0;
   width: 100vw;
+  position: absolute;
+  right: 0;
 }
 
 @media (min-width: 992px) {
   .modal-dialog {
-    position: absolute;
-    right: 0;
     max-width: unset;
     width: 540px;
   }
@@ -11212,6 +11212,12 @@ footer .copyRight {
 .modal-content {
   border: none;
   border-radius: 0;
+}
+
+@media (min-width: 992px) {
+  .modal-content {
+    height: 100vh;
+  }
 }
 
 .modal-header {
@@ -11276,11 +11282,12 @@ footer .copyRight {
 .toastArea .toast {
   -webkit-box-shadow: none;
           box-shadow: none;
+  max-width: unset;
+  border: none;
 }
 
 @media (min-width: 992px) {
   .toastArea .toast {
-    max-width: unset;
     width: 100%;
   }
 }
@@ -11314,7 +11321,7 @@ footer .copyRight {
 .toast-body {
   background: #F2F2F2;
   padding: 8px;
-  width: 72%;
+  width: 79%;
 }
 
 @media (min-width: 992px) {
@@ -11361,6 +11368,10 @@ footer .copyRight {
   padding: 0 12px;
 }
 
+.toast-body .numberBtn .material-icons:first-child {
+  padding-left: 0;
+}
+
 .toast-body .listItemCounter p {
   font-weight: bold;
   font-size: 16px;
@@ -11368,7 +11379,7 @@ footer .copyRight {
 
 @media (min-width: 992px) {
   .totalInner {
-    width: 81%;
+    width: 75%;
   }
 }
 
@@ -11391,7 +11402,7 @@ footer .copyRight {
 }
 
 .mainTotal {
-  margin-bottom: 178px;
+  margin-bottom: 40%;
 }
 
 @media (min-width: 992px) {

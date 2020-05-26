@@ -1,13 +1,14 @@
 "use strict";
 
 $(document).ready(function () {
+  $('.toast').toast('show');
   $(".hamburgerIcon").click(function (e) {
     e.preventDefault();
-    $(".hamburgerList").toggleClass("show");
+    $(".hamburgerList").toggleClass("showUp");
   });
   $(".backIcon").click(function (e) {
     e.preventDefault();
-    $(".hamburgerList").toggleClass("show");
+    $(".hamburgerList").toggleClass("showUp");
   });
   $("#rotateBtn").click(function (e) {
     e.preventDefault();
@@ -43,20 +44,6 @@ $(document).ready(function () {
     }
   }); // 自製按鈕
 
-  var num = Number(document.querySelector("#numberArr").textContent);
-  $("#plus").click(function (e) {
-    e.preventDefault();
-    num += 1;
-    document.querySelector("#numberArr").textContent = num;
-  });
-  $("#minus").click(function (e) {
-    e.preventDefault();
-
-    if (num > 1) {
-      num -= 1;
-      document.querySelector("#numberArr").textContent = num;
-    }
-  });
   var num2 = Number(document.querySelector("#numberArr2").textContent);
   $("#plus2").click(function (e) {
     e.preventDefault();
@@ -85,6 +72,19 @@ $(document).ready(function () {
       document.querySelector("#numberArr3").textContent = num3;
     }
   });
-  $('.toast').toast('show');
+  var num = Number(document.querySelector("#numberArr").textContent);
+  $("#plus").click(function (e) {
+    e.preventDefault();
+    num += 1;
+    document.querySelector("#numberArr").textContent = num;
+  });
+  $("#minus").click(function (e) {
+    e.preventDefault();
+
+    if (num > 1) {
+      num -= 1;
+      document.querySelector("#numberArr").textContent = num;
+    }
+  });
 });
 //# sourceMappingURL=all.js.map
